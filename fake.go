@@ -92,12 +92,12 @@ func (s *rndSrc) Seed(n int64) {
 
 // GetLangs returns a slice of available languages
 func GetLangs() []string {
-	var langs []string
-	for k, v := range data {
-		if v.isDir && k != "/" && k != "/data" {
-			langs = append(langs, strings.Replace(k, "/data/", "", 1))
-		}
+	langs := []string{
+		"en",
+		"ru",
+		"fr",
 	}
+
 	return langs
 }
 
